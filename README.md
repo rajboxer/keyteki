@@ -59,6 +59,18 @@ In another terminal, run the following command:
 docker-compose exec lobby node server/scripts/fetchdata
 ```
 
+Connect to pgAdmin
+
+```
+docker run -p 80:80 -e \
+'PGADMIN_DEFAULT_EMAIL=user@domain.local' -e \
+'PGADMIN_DEFAULT_PASSWORD=123' \
+--name dev-pgadmin -d dpage/pgadmin4 \--network keyteki_default
+
+docker inspect keyteki_postgres_1 -f "{{json .NetworkSettings.Networks }}"
+```
+Then go to localhost:80, use the IPaddress above, username=keyteki and password=changemeplease (from .YML)
+
 ### Non Docker
 
 #### Required Software
