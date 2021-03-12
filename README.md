@@ -89,7 +89,7 @@ npm install
 mkdir server/logs
 ```
 
-Create config/local.json5 and put the following in it:
+Create config/local.json5 and put the following in it (see below, should change 'localhost' to the Docker container IP address):
 
 ```
 {
