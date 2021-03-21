@@ -1,0 +1,29 @@
+CardImport
+
+
+FetchData
+doImport
+	dataSource = JSONCardSource
+	imageSource = KeyforgeImageSource = request
+	directory = keyteki-json-data
+		See that folder on how to import from API
+	cardImport().import()
+
+cardImport = CardImport
+	constructor
+	import -> importCards
+	cards = getCards = JSONCardSource.getcards()
+		JSONcardsource directory = 
+	fetchImages(cards)
+		imagedir = public img cards
+		makes a directory
+		makes a halfsize directory
+		fetches via KeyforgeImageSource
+
+
+KeyforgeImageSource
+	Fetches images from given Url and Path
+	imageUrl : from JSON cards read
+
+	Where is this reading/requesting from api, actual URL is this, but looks like it's read from JSON image flag
+	https://cdn.keyforgegame.com/media/card_front/en/435_001_CCC247PX4H2C_en.png
